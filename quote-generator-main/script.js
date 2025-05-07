@@ -61,3 +61,4 @@ const quotes = {
   // Load first quote
   displayQuote();
   
+  

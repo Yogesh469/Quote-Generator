@@ -13,16 +13,20 @@ body {
   text-align: center;
   transition: background-color 0.4s ease, color 0.4s ease;
   padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* Light Mode Background */
 body.light-mode {
-  background: linear-gradient(135deg, #73aee9, #d9e2ec);
+  background-image: url('big.gif');
   color: #000;
 }
 
-
+/* Dark Mode Background */
 body.dark-mode {
-  background-color: #121212;
+  background-image: url('dark-mode-bg.gif');
   color: #fff;
 }
 
@@ -69,19 +73,31 @@ body.dark-mode .main-content {
 }
 
 .text-area {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.6;
   margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: text-shadow 0.3s ease;
+}
+
+.text-area:hover {
+  text-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4;
 }
 
 .person {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 10px;
-  color: rgb(255, 72, 72);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: rgb(255, 29, 29);
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: text-shadow 0.3s ease;
+}
+
+.person:hover {
+  text-shadow: 0 0 10px #ff1d1d, 0 0 20px #ff1d1d;
 }
 
 .font-size-control,
@@ -95,19 +111,21 @@ body.dark-mode .main-content {
 
 .font-size-control button,
 .button-area button {
-  background-color: #1e1e1e;
-  color: #fff;
+  background-color: #262626;
+  color: white;
   font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 30px;
-  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.25s, transform 0.2s;
+  transition: background-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 .font-size-control button:hover,
 .button-area button:hover {
-  background-color: #333;
+  background-color: #000;
+  box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
   transform: translateY(-2px);
 }
 
@@ -134,64 +152,3 @@ body.dark-mode select {
   border-color: #444;
 }
 
-/* added 1 */
-.font-size-control button,
-.button-area button {
-  background-color: #262626;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.25s, box-shadow 0.25s, transform 0.2s;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
-.font-size-control button:hover,
-.button-area button:hover {
-  background-color: #000;
-  box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
-  transform: translateY(-2px);
-}
-
-/* added2 */
-
-.text-area {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-  transition: text-shadow 0.3s ease;
-}
-
-.text-area:hover {
-  text-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4;
-}
-
-.person {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 15px;
-  color: rgb(255, 29, 29);
-  text-transform: uppercase;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-  transition: text-shadow 0.3s ease;
-}
-
-.person:hover {
-  text-shadow: 0 0 10px #ff1d1d, 0 0 20px #ff1d1d;
-}
-
-/* Default background for light mode change1 */
-body {
-  background-image: url('light-mode-bg.gif');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Background for dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-image: url('dark-mode-bg.gif');
-  }
-}
