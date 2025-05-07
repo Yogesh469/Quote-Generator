@@ -1,135 +1,197 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Golos Text', sans-serif;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Golos Text', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  padding: 20px;
+}
+
+body.light-mode {
+  background: linear-gradient(135deg, #73aee9, #d9e2ec);
+  color: #000;
+}
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.header {
+  font-size: 1.5rem;
+  border: 3px solid #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 25px;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #222;
+  font-weight: 600;
+}
+
+body.dark-mode .header {
+  background-color: rgba(34, 34, 34, 0.85);
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+.main-content {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 35px 25px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .main-content {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+}
+
+.text-area {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.person {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: rgb(255, 72, 72);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.font-size-control,
+.button-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.font-size-control button,
+.button-area button {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.2s;
+}
+
+.font-size-control button:hover,
+.button-area button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.font-size-control button:active,
+.button-area button:active {
+  background-color: #00bcd4;
+  color: #fff;
+  transform: scale(0.95);
+}
+
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  transition: all 0.3s;
+}
+
+body.dark-mode select {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+/* added 1 */
+.font-size-control button,
+.button-area button {
+  background-color: #262626;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.font-size-control button:hover,
+.button-area button:hover {
+  background-color: #000;
+  box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
+  transform: translateY(-2px);
+}
+
+/* added2 */
+
+.text-area {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: text-shadow 0.3s ease;
+}
+
+.text-area:hover {
+  text-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4;
+}
+
+.person {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: rgb(255, 29, 29);
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: text-shadow 0.3s ease;
+}
+
+.person:hover {
+  text-shadow: 0 0 10px #ff1d1d, 0 0 20px #ff1d1d;
+}
+
+/* Default background for light mode change1 */
+body {
+  background-image: url('light-mode-bg.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Background for dark mode */
+@media (prefers-color-scheme: dark) {
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    padding: 20px;
+    background-image: url('dark-mode-bg.gif');
   }
-  
-  body.light-mode {
-    background: url('/image/pexels-mark-tacatani-1413458.jpg') no-repeat center center/cover;
-    color: #000;
-  }
-  
-  body.dark-mode {
-    background-color: #121212;
-    color: #fff;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-  }
-  
-  .header {
-    font-size: 1.5rem;
-    border: 3px solid #ffffff;
-    border-radius: 12px;
-    padding: 12px;
-    margin-bottom: 25px;
-    background-color: rgba(255, 255, 255, 0.75);
-    color: #222;
-    font-weight: 600;
-  }
-  
-  body.dark-mode .header {
-    background-color: rgba(34, 34, 34, 0.85);
-    color: #f5f5f5;
-    border-color: #444;
-  }
-  
-  .main-content {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 35px 25px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  body.dark-mode .main-content {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
-  }
-  
-  .text-area {
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-  
-  .person {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 10px;
-    color: rgb(255, 72, 72);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .font-size-control,
-  .button-area {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .font-size-control button,
-  .button-area button {
-    background-color: #1e1e1e;
-    color: #fff;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.25s, transform 0.2s;
-  }
-  
-  .font-size-control button:hover,
-  .button-area button:hover {
-    background-color: #333;
-    transform: translateY(-2px);
-  }
-  
-  .font-size-control button:active,
-  .button-area button:active {
-    background-color: #00bcd4;
-    color: #fff;
-    transform: scale(0.95);
-  }
-  
-  select {
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    transition: all 0.3s;
-  }
-  
-  body.dark-mode select {
-    background-color: #2b2b2b;
-    color: #f5f5f5;
-    border-color: #444;
-  }
-  
+}
