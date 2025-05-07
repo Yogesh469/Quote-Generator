@@ -6,6 +6,17 @@ const quotes = {
     science: [
       { text: "Science is magic that works.", author: "Kurt Vonnegut" },
       { text: "Somewhere, something incredible is waiting to be known.", author: "Carl Sagan" }
+    ],
+    Mindfulness: [
+      { text: "Be happy in the moment, that’s enough.Each moment is all we need.", author: "Mother Teresa" },
+      { text: "Realize deeply that the present moment is all you ever have.", author: "Eckhart Tolle" },
+      { text: "Don't let your mind bully your body into believing it must carry the burden of its worries.", author: "Astrid Alauda" }
+    ],
+    Motivational:[
+      { text: "The successful warrior is the average man, with laser-like focus", author: "Bruce Lee" },
+      { text: "My success, part of it certainly, is that I have focused in on a few things.", author: " Bill Gates" },
+      { text: "You can't depend on your eyes when your imagination is out of focus.", author: " Mark Twain" }
+
     ]
   };
   
