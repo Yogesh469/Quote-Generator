@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.light-mode {
+    background: url(/image/pexels-mark-tacatani-1413458.jpg) no-repeat center center/cover;
+    color: #000;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 550px;
+    padding: 20px;
+  }
+  
+  .header {
+    font-size: 1.2rem;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .main-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  body.dark-mode .main-content {
+    background-color: #1e1e1e;
+  }
+  
+  .text-area {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .person {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: rgb(255, 29, 29);
+    text-transform: uppercase;
+  }
+  
+  .font-size-control button,
+  .button-area button {
+    background-color: #262626;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .font-size-control button:hover,
+  .button-area button:hover {
+    background-color: #000;
+  }
+  
+  .font-size-control button:active,
+  .button-area button:active {
+    background-color: lightblue;
+    color: #000;
+  }
+  
+  select {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
