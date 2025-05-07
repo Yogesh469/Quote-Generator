@@ -9,13 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    padding: 20px;
   }
   
   body.light-mode {
-    background: url(/image/pexels-mark-tacatani-1413458.jpg) no-repeat center center/cover;
+    background: url('/image/pexels-mark-tacatani-1413458.jpg') no-repeat center center/cover;
     color: #000;
   }
   
@@ -25,71 +26,110 @@
   }
   
   .container {
-    width: 90%;
-    max-width: 550px;
-    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
   }
   
   .header {
-    font-size: 1.2rem;
-    border: 4px solid #fff;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    border: 3px solid #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #222;
+    font-weight: 600;
+  }
+  
+  body.dark-mode .header {
+    background-color: rgba(34, 34, 34, 0.85);
+    color: #f5f5f5;
+    border-color: #444;
   }
   
   .main-content {
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 35px 25px;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   }
   
   body.dark-mode .main-content {
     background-color: #1e1e1e;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
   }
   
   .text-area {
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 10px;
   }
   
   .person {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 15px;
-    color: rgb(255, 29, 29);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: rgb(255, 72, 72);
     text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .font-size-control,
+  .button-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
   }
   
   .font-size-control button,
   .button-area button {
-    background-color: #262626;
-    color: white;
+    background-color: #1e1e1e;
+    color: #fff;
     font-size: 1rem;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
     cursor: pointer;
+    transition: background-color 0.25s, transform 0.2s;
   }
   
   .font-size-control button:hover,
   .button-area button:hover {
-    background-color: #000;
+    background-color: #333;
+    transform: translateY(-2px);
   }
   
   .font-size-control button:active,
   .button-area button:active {
-    background-color: lightblue;
-    color: #000;
+    background-color: #00bcd4;
+    color: #fff;
+    transform: scale(0.95);
   }
   
   select {
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: all 0.3s;
+  }
+  
+  body.dark-mode select {
+    background-color: #2b2b2b;
+    color: #f5f5f5;
+    border-color: #444;
   }
   
