@@ -12,11 +12,23 @@ const quotes = {
       { text: "Realize deeply that the present moment is all you ever have.", author: "Eckhart Tolle" },
       { text: "Don't let your mind bully your body into believing it must carry the burden of its worries.", author: "Astrid Alauda" }
     ],
-    Motivational:[
-      { text: "The successful warrior is the average man, with laser-like focus", author: "Bruce Lee" },
-      { text: "My success, part of it certainly, is that I have focused in on a few things.", author: " Bill Gates" },
-      { text: "You can't depend on your eyes when your imagination is out of focus.", author: " Mark Twain" }
+    Developer_Humor:[
+      { text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", author: "Martin Fowler" },
+      { text: "Code never lies, comments sometimes do.", author: " Ron Jeffries" },
+      { text: "Software and cathedrals are much the same — first we build them, then we pray.", author: " Sam Redwine" }
 
+    ],
+    Famous_Authors:[
+      { text: "All the world's a stage, and all the men and women merely players.", author: "William Shakespeare" },
+      { text: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
+      { text: "When you want something, all the universe conspires in helping you to achieve it", author: "Saharuk khan" }
+
+    ],
+    Sarcastic_Quotes:[
+      { text: "People say nothing is impossible, but I do nothing every day.", author: "A.A. Milne" },
+      { text: "I never forget a face, but in your case I’ll be glad to make an exception.", author: "Groucho Marx" },
+      { text: "Your secrets are safe with me. I never even listen when you tell me them.", author: " Anonymous" }
+    
     ]
   };
   

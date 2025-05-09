@@ -153,3 +153,42 @@ body.dark-mode select {
   
 }
 
+/*MOBILE SECTION START */
+@media (max-width: 600px) {
+  /* Changes for mobile screen sizes */
+  .container {
+    padding: 20px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .header {
+    font-size: 1.2rem; /* Reduced font size for better readability */
+    padding: 10px;
+  }
+
+  .text-area {
+    font-size: 1.1rem; /* Adjusted text size for mobile */
+  }
+
+  .person {
+    font-size: 1rem; /* Reduced font size for author text */
+  }
+
+  .font-size-control button,
+  .button-area button {
+    font-size: 0.9rem; /* Smaller buttons for mobile */
+    padding: 8px 12px;
+  }
+
+  select {
+    width: 100%; /* Ensure select element takes full width */
+    font-size: 0.95rem; /* Adjust select element font size */
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.95rem; /* Adjusted label size */
+  }
+}
+/*MOBILE SECTION END */
+
