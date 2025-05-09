@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Golos Text', sans-serif;
+  
 }
+
 
 body {
   display: flex;
@@ -20,14 +22,16 @@ body {
 
 /* Light Mode Background */
 body.light-mode {
-  background-image: url('big.gif');
-  color: #000;
+body.light-mode {
+  background-color: #ffffff;
+  color: #222222;
+}
 }
 
-/* Dark Mode Background */
+/*Dark Mode Background */
 body.dark-mode {
-  background-image: url('big2.gif');
-  color: #fff;
+   background-color: #121212;
+  color: #f1f1f1;
 }
 
 .container {
@@ -111,7 +115,7 @@ body.dark-mode .main-content {
 
 .font-size-control button,
 .button-area button {
-  background-color: #262626;
+  background-color: #060606;
   color: white;
   font-size: 1rem;
   padding: 10px 15px;
@@ -119,7 +123,7 @@ body.dark-mode .main-content {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.25s, box-shadow 0.25s, transform 0.2s;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.988);
 }
 
 .font-size-control button:hover,
